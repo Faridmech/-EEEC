@@ -1,4 +1,4 @@
-import { Box, Text, Center, Image, Tooltip } from "@chakra-ui/react";
+import { Box, Text, Center, Image, Tooltip, Link } from "@chakra-ui/react";
 import React from "react";
 
 export const EdBoard: React.FC = () => {
@@ -79,6 +79,64 @@ export const EdBoard: React.FC = () => {
             bg="blue.300"
             borderRadius="4px"
           ></Box>
+        </Box>
+      </Center>
+      <Center>
+        <Box
+          border="1px solid rgb(0,39,110)"
+          marginTop="2rem"
+          width="1200px"
+          height="100px"
+          boxShadow="5px 10px 6px #888888"
+          borderRadius="10px"
+          cursor="pointer"
+        >
+          <Center>
+            <Text fontSize="2rem" fontWeight="bold" textDecoration="none">
+              Editor in-Chief
+            </Text>
+          </Center>
+          <Tooltip label="Doctor of Thecnical Science, Professor , Click for  a wide information">
+            <Link
+              href="https://en.wikipedia.org/wiki/Nurali_Yusifbayli"
+              textDecoration="none"
+            >
+              <Text
+                fontSize="1.5rem"
+                color="rgb(0,39,110)"
+                fontWeight="bold"
+                paddingLeft="4px"
+                textDecoration="none"
+              >
+                Nurali Yusifbayli (Baku, Azerbaijan)
+              </Text>
+            </Link>
+          </Tooltip>
+        </Box>
+      </Center>
+      <Center>
+        {" "}
+        <Box
+          border="1px solid rgb(0,39,110)"
+          marginTop="2rem"
+          width="1200px"
+          height="130px"
+          boxShadow="5px 10px 6px #888888"
+          borderRadius="10px"
+          paddingLeft="4px"
+        >
+          <Text
+            fontSize="2rem"
+            fontWeight="bold"
+            textDecoration="none"
+            textAlign="center"
+          >
+            Editor in-Chief
+          </Text>
+          <Text fontSize="1.4rem">Valiyev Vilayat (Baku, Azerbaijan)</Text>
+          <Text border="1px solid black" width="343px" fontSize="1.4rem">
+            Huseynov Asaf (Baku, Azerbaijan)
+          </Text>
         </Box>
       </Center>
     </Box>
