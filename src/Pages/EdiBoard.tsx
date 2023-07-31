@@ -87,7 +87,7 @@ export const EdBoard: React.FC = () => {
           marginTop="2rem"
           width="1200px"
           height="100px"
-          boxShadow="5px 10px 6px #888888"
+          boxShadow="5px 10px 6px rgb(0,39,110)"
           borderRadius="10px"
           cursor="pointer"
         >
@@ -131,14 +131,315 @@ export const EdBoard: React.FC = () => {
             textDecoration="none"
             textAlign="center"
           >
-            Editor in-Chief
+            Deputy Editors in-Chief
           </Text>
           <Text fontSize="1.4rem">Valiyev Vilayat (Baku, Azerbaijan)</Text>
-          <Text border="1px solid black" width="343px" fontSize="1.4rem">
+          <Text
+            border="2px solid black"
+            width="360px"
+            fontSize="1.4rem"
+            fontWeight="bold"
+          >
             Huseynov Asaf (Baku, Azerbaijan)
           </Text>
         </Box>
       </Center>
+      <Center>
+        {" "}
+        <Box
+          border="1px solid rgb(0,39,110)"
+          marginTop="2rem"
+          width="1200px"
+          height={{ lg: "310px", md: "520px", sm: "520px" }}
+          boxShadow="5px 10px 6px #888888"
+          borderRadius="10px"
+          paddingLeft="4px"
+          paddingRight="10px"
+        >
+          <Box width="1000px" marginLeft="5rem">
+            <Text
+              fontSize="2rem"
+              fontWeight="bold"
+              textDecoration="none"
+              textAlign="center"
+              marginBottom="2.8rem"
+            >
+              International Advisory Board
+            </Text>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Babanli Mustafa (Baku, Azerbaijan)</Text>
+              <Text
+                border="2px solid black"
+                width="380px"
+                fontSize="1.4rem"
+                fontWeight="bold"
+              >
+                Arif Mehtiyev (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Hashimov Arif (Baku, Azerbaijan)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Aliguliyev Rasim (Baku, Azerbaijan)
+              </Text>
+            </Box>
+
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Aliyev Telman (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem" width={{ lg: "380px" }}>
+                Chetin Elmas (Turkey)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Kumbaroglu Gurkan (USA)</Text>
+              <Text fontSize="1.4rem" width={{ lg: "380px" }}>
+                Ayuyev Boris (Russia)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Voropay Nikolay (Russia)</Text>
+              <Text fontSize="1.4rem" width={{ lg: "380px" }}>
+                Ozdemir Aydogan (Istanbul,Turkey)
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+      </Center>
+      <Center>
+        {" "}
+        <Box
+          border="1px solid rgb(0,39,110)"
+          marginTop="2rem"
+          width="1200px"
+          height={{ lg: "570px", md: "900px", sm: "900px" }}
+          boxShadow="5px 10px 6px #888888"
+          borderRadius="10px"
+          paddingLeft="4px"
+          paddingRight="10px"
+        >
+          <Box width="1000px" marginLeft="5rem">
+            <Text
+              fontSize="2rem"
+              fontWeight="bold"
+              textDecoration="none"
+              textAlign="center"
+              marginBottom="2.8rem"
+            >
+              Editorial Board
+            </Text>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Aliyev Aydin (Baku, Azerbaijan)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Guliyev Huseyngulu (Baku,Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Ahmadov Elbrus (Baku, Azerbaijan)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Hasanov Zakir (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Abdullayev Kamal (Baku, Azerbaijan)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Lazimov Tahir (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">
+                Agamaliyev Mukhtar (Baku, Azerbaijan)
+              </Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Musayev Musavar (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Aliyev Fikret (Baku, Azerbaijan)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Nasibov Valeh (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Abullayev Yashar (Baku, Azerbaijan)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Nurubayli Zulfugar (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">
+                Dimirovski Georgi (Skopje, Macedonia)
+              </Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Rajabli Kamran (USA)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Izykowski Jan (Poland)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Rahmanov Nariman (Baku, Azerbaijan)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Ilyushin Pavel (Russia)</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Tabatabaei Naser (Iran)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">
+                Farhadzadeh Elmar (Baku, Azerbaijan)
+              </Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                Yerokhin Pyotr (Russia)
+              </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">Guliyev Askar (Baku, Azerbaijan)</Text>
+            </Box>
+          </Box>
+        </Box>
+      </Center>
+      <Center>
+        <Box
+          border="1px solid rgb(0,39,110)"
+          marginTop="2rem"
+          width="1200px"
+          height={{ lg: "170px", md: "240px", sm: "240px" }}
+          boxShadow="5px 10px 6px #888888"
+          borderRadius="10px"
+          display="flex"
+          flexDirection={{ lg: "row", md: "column", sm: "column" }}
+          alignItems="center"
+        >
+          <Box
+            width={{ lg: "600px", md: "", sm: "" }}
+            marginLeft="5rem"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            marginBottom="7px"
+          >
+            <Text fontSize="2rem" fontWeight="bold">
+              Executive Editors
+            </Text>
+
+            <Text fontSize="1.4rem">Yusifbayli Fidan (Baku Azerbaijan)</Text>
+            <Text fontSize="1.4rem">Marufov Ilkin (Baku, Azerbaijan)</Text>
+          </Box>
+
+          <Box
+            width={{ lg: "600px", md: "", sm: "" }}
+            marginLeft={{ lg: "7rem", md: "5rem", sm: "5rem" }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            marginBottom="7px"
+          >
+            <Text fontSize="2rem" fontWeight="bold">
+              Editorial Assistants
+            </Text>
+            <Text fontSize="1.4rem">Huseynli Farid (Baku, Azerbaijan)</Text>
+            <Text fontSize="1.4rem">Marufov Ilkin (Baku, Azerbaijan)</Text>
+          </Box>
+        </Box>
+      </Center>
+      <Box height="40px"></Box>
     </Box>
   );
 };
