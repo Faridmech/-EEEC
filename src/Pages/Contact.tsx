@@ -15,18 +15,19 @@ export const Contact: React.FC = () => {
       <Center>
         <Box
           bg="rgb(178,193,209)"
-          position="relative"
           marginTop="6rem"
           height="500px"
-          width="1000px"
+          width={{ lg: "1000px", md: "600px", sm: "400px" }}
           border="1px solid rgb(0,39,110)"
           borderRadius="30px"
           boxShadow="5px 10px 6px rgb(0,39,110)"
+          display="flex"
+          flexDirection="row"
         >
           <Box display="flex" flexDirection="column">
             {" "}
             <Input
-              width="680px"
+              width={{ lg: "680px", md: "590px", sm: "390px" }}
               marginTop="50px"
               placeholder="Name &  Coauthor's name"
               marginLeft="5px"
@@ -35,7 +36,7 @@ export const Contact: React.FC = () => {
               _hover={{ borderColor: "white" }}
             />
             <Input
-              width="680px"
+              width={{ lg: "680px", md: "590px", sm: "390px" }}
               marginTop="50px"
               placeholder="Article's name"
               marginLeft="5px"
@@ -44,7 +45,7 @@ export const Contact: React.FC = () => {
               _hover={{ borderColor: "white" }}
             />
             <Input
-              width="680px"
+              width={{ lg: "680px", md: "590px", sm: "390px" }}
               marginTop="50px"
               placeholder="E-mail adress"
               marginLeft="5px"
@@ -53,11 +54,11 @@ export const Contact: React.FC = () => {
               _hover={{ borderColor: "white" }}
             />
             <Button
-              width="500px"
+              width={{ lg: "500px", md: "400px", sm: "360px" }}
               height="50px"
               bg="rgb(25,71,117)"
               marginTop="50px"
-              marginLeft="100px"
+              marginLeft={{ lg: "100px", md: "80px", sm: "20px" }}
               variant="ghost"
               color="white"
               _hover={{ backgroundColor: "white", color: "rgb(25,71,117)" }}
@@ -67,9 +68,9 @@ export const Contact: React.FC = () => {
           </Box>
         </Box>
         <Box
-          position={{ lg: "absolute", md: "relative", sm: "relative" }}
-          marginTop={{ lg: "200px", md: "5px" }}
-          marginLeft={{ lg: "750px", md: "1px", sm: "1px" }}
+          position="absolute"
+          marginTop={{ lg: "200px", md: "1200px", sm: "1200px" }}
+          marginLeft={{ lg: "750px", md: "10px", sm: "10px" }}
           height="500px"
           width="350px"
           border="1px solid rgb(0,39,110)"
