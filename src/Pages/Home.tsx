@@ -31,6 +31,12 @@ export const Home: React.FC = () => {
               src="/NY.jpeg"
               boxShadow=" 5px 10px 12px #888888"
             ></Image>
+            <Image
+              marginTop="2rem"
+              src="/back.jpeg"
+              boxShadow=" 5px 10px 12px #888888"
+              width={{ lg: "400px", md: "400px", sm: "800px" }}
+            ></Image>
           </Box>
           <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
             <Text color={{ md: "red" }}>Dear Colleagues, </Text>
