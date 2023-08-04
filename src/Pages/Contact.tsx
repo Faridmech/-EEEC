@@ -1,7 +1,8 @@
-import { Box, Button, Center, Input, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Center, Input, Text } from "@chakra-ui/react"
+import { useState } from "react"
 
 export const Contact: React.FC = () => {
+  const [selectedDocs, setSelectedDocs] = useState<File[]>([])
   return (
     <Box>
       <Text
@@ -53,7 +54,14 @@ export const Contact: React.FC = () => {
               height="50px"
               _hover={{ borderColor: "white" }}
             />
-            <Button
+            <Input
+              type="file"
+              accept=".pdf"
+              multiple
+              onChange={(el) =>
+                el.target.files?.length &&
+                setSelectedDocs(Array.from(el.target.files))
+              }
               width={{ lg: "500px", md: "400px", sm: "360px" }}
               height="50px"
               bg="rgb(25,71,117)"
@@ -62,9 +70,7 @@ export const Contact: React.FC = () => {
               variant="ghost"
               color="white"
               _hover={{ backgroundColor: "white", color: "rgb(25,71,117)" }}
-            >
-              Upload file
-            </Button>
+            />
           </Box>
         </Box>
         <Box
@@ -98,5 +104,5 @@ export const Contact: React.FC = () => {
         </Box>
       </Center>
     </Box>
-  );
-};
+  )
+}
