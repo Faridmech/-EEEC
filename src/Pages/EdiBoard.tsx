@@ -1,5 +1,5 @@
-import { Box, Text, Center, Image, Tooltip, Link } from "@chakra-ui/react";
-import React from "react";
+import { Box, Text, Center, Image, Tooltip, Link } from "@chakra-ui/react"
+import React from "react"
 
 export const EdBoard: React.FC = () => {
   return (
@@ -441,5 +441,5 @@ export const EdBoard: React.FC = () => {
       </Center>
       <Box height="40px"></Box>
     </Box>
-  );
-};
+  )
+}

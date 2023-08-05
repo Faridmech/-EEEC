@@ -1,8 +1,7 @@
-import { Box, Image, Text } from "@chakra-ui/react"
+import { Box, Heading, Image, Text, Center } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import React from "react"
 import dataF from "./data.json"
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer"
 
 interface dataF {
   title: string
@@ -17,46 +16,32 @@ interface dataF {
 }
 
 export const Archive: React.FC = () => {
-  const [selectedDocs, setSelectedDocs] = useState<File[]>([])
-
-  const docs = [
-    { uri: require("./EV1N12010.pdf") }, // Local File
-  ]
-  // const getCuisine = async () => {
-  //   const data = await fetch(
-  //     `https://www.themealdb.com/api/json/v1/1/search.php?s=${type}`
-  //   );
-  //   const recipes = await data.json();
-  //   setCuisine(recipes.meals);
-  //   console.log("Cusine", recipes.meals);
-  // };
-
   return (
     <>
       {dataF.map((item) => {
         return (
-          <Box height="600px" width="500px">
-            <DocViewer documents={docs} pluginRenderers={DocViewerRenderers} />
+          <Box display="flex" flexDirection="row">
+            <Box>
+              <Image src={item.url} width="400px" height="500px"></Image>
+            </Box>
+            <Box width="900px">
+              <Text>{item.title}</Text>
+              <Text>
+                {item.Contens.map((i) => {
+                  return (
+                    <Box border="1px solid black">
+                      <Text>
+                        {i.author} Page- {i.page}
+                      </Text>
+                      <Text>{i.name}</Text>
+                    </Box>
+                  )
+                })}
+              </Text>
+            </Box>
           </Box>
         )
       })}
-
-      <input
-        type="file"
-        accept=".pdf"
-        multiple
-        onChange={(el) =>
-          el.target.files?.length &&
-          setSelectedDocs(Array.from(el.target.files))
-        }
-      />
-      <DocViewer
-        documents={selectedDocs.map((file) => ({
-          uri: window.URL.createObjectURL(file),
-          fileName: file.name,
-        }))}
-        pluginRenderers={DocViewerRenderers}
-      />
     </>
   )
 }

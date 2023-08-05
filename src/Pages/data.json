@@ -2,6 +2,7 @@
   {
     "title": "EEEC Volume 12 No 2 2022",
     "url": "/V12_N2_2022.jpg",
+    "id": 9,
     "Contens": [
       {
         "author": "Huseynov V.A., Gasimova R.E",
@@ -39,6 +40,7 @@
   {
     "title": "EEEC Volume 12 No 1 2022",
     "url": "/V12_N1_2022.jpg",
+    "id": 8,
     "Contens": [
       {
         "author": "Yusifbayli N.A., Nasibov V.Kh., Alizade R.R.",
@@ -76,6 +78,7 @@
   {
     "title": "EEEC Volume 11 No 2 2021",
     "url": "/V11_N2_2021.jpg",
+    "id": 7,
     "Contens": [
       {
         "author": "Nurali Yusifbayli, Valeh Nasibov, Rana Alizade.",
@@ -118,6 +121,7 @@
   {
     "title": "EEEC Volume 11 No 1 2021",
     "url": "/V11_N1_2021.jpg",
+    "id": 6,
     "Contens": [
       {
         "author": "Saka M., Gozde H., Eke I., Yusifbayli N., Taplamacioglu M.C.",
@@ -155,6 +159,7 @@
   {
     "title": "EEEC Volume 10 No 2 2020",
     "url": "/V10_N2_2020.jpg",
+    "id": 5,
     "Contens": [
       {
         "author": "Aгамалиев М.М., Алескеров А.А., Ахмедова Д.А",
@@ -192,6 +197,7 @@
   {
     "title": "EEEC Volume 10 No 1 2020",
     "url": "/V10_N1_2020.jpg",
+    "id": 4,
     "Contens": [
       {
         "author": "Yusifbəyli N.A., Nəsibov V., Balazadə İ.M",
@@ -224,6 +230,7 @@
   {
     "title": "EEEC Volume 9 No 2 2019",
     "url": "/V9_N2_2019.jpg",
+    "id": 3,
     "Contens": [
       {
         "author": "Agamaliyev M.M., Ahmadova C.A., Mammadbayova M.M",
@@ -256,6 +263,7 @@
   {
     "title": "EEEC Volume 2 No 1 2011",
     "url": "/V2_N1_2011.jpg",
+    "id": 2,
     "Contens": [
       {
         "author": "V.V.Bushuyev, N.K.Kurichev,A.A.Troiskiy",
@@ -293,6 +301,7 @@
   {
     "title": "EEEC Volume 1 No 1 2010",
     "url": "/V1_N1_2010.jpg",
+    "id": 1,
     "Contens": [
       {
         "author": "N.A.Yusifbayli, A.M.Quseynov, I.A.Aghasiyev",

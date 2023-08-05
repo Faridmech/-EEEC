@@ -1,6 +1,6 @@
-import { Box, Center, Image, SimpleGrid, Text } from "@chakra-ui/react";
-import React from "react";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Center, Image, SimpleGrid, Text } from "@chakra-ui/react"
+import React from "react"
+import { Grid, GridItem } from "@chakra-ui/react"
 export const Home: React.FC = () => {
   return (
     <Box>
@@ -12,7 +12,11 @@ export const Home: React.FC = () => {
           width="800px"
           height="120px"
         >
-          <Image src="/adnsu.png" boxShadow=" 5px 10px 12px #888888"></Image>
+          <Image
+            src="/adnsu.png"
+            boxShadow=" 5px 10px 12px #888888"
+            borderRadius="5px"
+          ></Image>
           <Image src="/Area.png" boxShadow=" 5px 10px 12px #888888"></Image>
           <Image
             src="/aztu.png"
@@ -30,6 +34,7 @@ export const Home: React.FC = () => {
               width={{ md: 400 }}
               src="/NY.jpeg"
               boxShadow=" 5px 10px 12px #888888"
+              borderRadius="8px"
             ></Image>
             <Image
               marginTop="2rem"
@@ -116,5 +121,5 @@ export const Home: React.FC = () => {
       </Center>
       <Box height="50px"></Box>
     </Box>
-  );
-};
+  )
+}
