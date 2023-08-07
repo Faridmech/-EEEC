@@ -3,15 +3,26 @@ import { ElementType, useRef, useState } from "react"
 
 export const Contact: React.FC = () => {
   const [selectedDocs, setSelectedDocs] = useState<File[]>([])
+  const [fileName, setFileName] = useState<string[]>(["No choosen file"])
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  console.log("selected", selectedDocs)
+  const onClickFileNamesetter = () => {
+    const selectedFileNames = selectedDocs.map((item) => item.name)
+    setFileName(selectedFileNames)
+  }
 
   const onClickFileUploadHandler = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click()
     }
   }
+
+  const functions = [onClickFileUploadHandler, onClickFileNamesetter]
+
+  const handleButton = () => {
+    functions.forEach((func) => func())
+  }
+
   return (
     <Box h="100%">
       <Text textAlign="center" fontSize="2rem" color="rgb(0,39,110)" mt="2rem">
@@ -41,25 +52,30 @@ export const Contact: React.FC = () => {
                 accept=".pdf"
                 display="none"
                 multiple
-                onChange={(el) =>
+                onChange={(el) => {
                   el.target.files?.length &&
-                  setSelectedDocs(Array.from(el.target.files))
-                }
-                width={{ lg: "500px", md: "400px", sm: "360px" }}
-                height="50px"
-                bg="rgb(25,71,117)"
-                marginTop="50px"
-                marginLeft={{ lg: "100px", md: "80px", sm: "20px" }}
-                variant="ghost"
-                color="white"
-                _hover={{ backgroundColor: "white", color: "rgb(25,71,117)" }}
+                    setSelectedDocs(Array.from(el.target.files))
+                }}
               />
-              <Button
-                variant="outline"
-                fontSize="14px"
-                onClick={onClickFileUploadHandler}
+              <Box
+                display="flex"
+                flexDirection="row"
+                gap="10px"
+                alignItems="center"
               >
-                Select files
+                <Button
+                  variant="outline"
+                  fontSize="14px"
+                  onClick={handleButton}
+                >
+                  Select files
+                </Button>
+                <Text>{fileName}</Text>
+              </Box>
+
+              <Button type="submit" variant="outline" fontSize="14px">
+                {" "}
+                Submit
               </Button>
             </VStack>
           </Center>
