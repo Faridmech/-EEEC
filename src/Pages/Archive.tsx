@@ -3,9 +3,10 @@ import { useEffect, useState } from "react"
 import React from "react"
 import dataF from "./data.json"
 
-interface iProps {
+interface IProps {
   title: string
   url: string
+  pdfUrl: string
   content: [
     {
       author: string
@@ -47,17 +48,26 @@ export const Archive: React.FC = () => {
           onChange={handleSearch}
           width="700px"
           borderRadius="17px"
-          borderColor="black"
+          borderColor="blue"
           border="2px solid"
         />
       </Center>
 
       {filteredData.map((item) => {
+        const pdfurl = item.pdfUrl
         return (
           <Center>
             <Box display="flex" flexDirection="row" mt="1.4rem">
               <Box>
-                <Image src={item.url} width="400px" height="500px"></Image>
+                <Image
+                  src={item.url}
+                  width="400px"
+                  height="500px"
+                  onClick={() => {
+                    window.open(pdfurl, "_blank")
+                  }}
+                  cursor="pointer"
+                ></Image>
               </Box>
               <Box marginLeft="2rem" width="800px">
                 <Text
