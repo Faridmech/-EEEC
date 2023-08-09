@@ -4,7 +4,7 @@ import { Grid, GridItem } from "@chakra-ui/react"
 export const Home: React.FC = () => {
   return (
     <Box>
-      <Center>
+      {/* <Center>
         <Box
           marginTop="3rem"
           display="flex"
@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
             boxShadow=" 5px 10px 12px #888888"
           ></Image>{" "}
         </Box>
-      </Center>
+      </Center> */}
 
       <Center>
         <Box width="1200px" marginTop="5rem" display={{ md: "flex" }}>
