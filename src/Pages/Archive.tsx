@@ -57,7 +57,12 @@ export const Archive: React.FC = () => {
         const pdfurl = item.pdfUrl
         return (
           <Center>
-            <Box display="flex" flexDirection="row" mt="1.4rem">
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", sm: "column" }}
+              mt="1.4rem"
+              justifyContent="center"
+            >
               <Box>
                 <Image
                   src={item.url}

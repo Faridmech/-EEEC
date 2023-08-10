@@ -19,15 +19,39 @@ export const Navigations: React.FC = () => {
   const { checkIsActive } = useIsActiveRoute()
 
   return (
-    <Box display="flex" flexDirection="row">
+    <HStack
+      zIndex={10}
+      w="100%"
+      spacing="20px"
+      borderRadius="5px"
+      p="5px"
+      bg="rgb(245,245,245)"
+      pos="sticky"
+      top="5px"
+      alignItems="center"
+    >
       <Box
-        mt="7px"
         display="flex"
-        justifyContent={{ md: "space-between", base: "center" }}
-        gap="9px"
-        position="relative"
-        zIndex={200}
+        alignItems="center"
+        justifyContent="center"
+        width="67px"
+        height="30px"
+        bg="rgb(0,49,119)"
+        borderRadius="5px"
       >
+        <Tooltip label="ELECTROENERGETICS, ELECTROTECHNICS, ELECTROMECHANICS + CONTROL">
+          <Text
+            color="white"
+            fontWeight="bold"
+            fontSize="1.6rem"
+            margin="0"
+            padding="0"
+          >
+            EEEC
+          </Text>
+        </Tooltip>
+      </Box>
+      <Box display="flex" gap="13px" position="sticky" zIndex={200} flex={1}>
         <ChakraLink href="http://asoiu.edu.az/">
           <Tooltip
             label=" Azerbaijan State Oil and Industry University"
@@ -37,7 +61,7 @@ export const Navigations: React.FC = () => {
               marginLeft="1rem"
               src="/adnsu.png"
               borderRadius="10%"
-              height="45px"
+              height={{ lg: "45px", md: "35px", sm: "35px" }}
             ></Image>
           </Tooltip>
         </ChakraLink>
@@ -47,7 +71,11 @@ export const Navigations: React.FC = () => {
             hasArrow
             label="Azerbaijan Scientific-Research & Design Prospecting Power Engineering Institute"
           >
-            <Image src="/Area.png" borderRadius="10%" height="45px"></Image>
+            <Image
+              src="/Area.png"
+              borderRadius="10%"
+              height={{ lg: "45px", md: "35px", sm: "35px" }}
+            ></Image>
           </Tooltip>
         </ChakraLink>
 
@@ -57,34 +85,22 @@ export const Navigations: React.FC = () => {
               borderRadius="10%"
               src="/aztu.png"
               bg="rgb(19,29,100)"
-              height="45px"
+              height={{ lg: "45px", md: "35px", sm: "35px" }}
+              width="80px"
             ></Image>
           </Tooltip>
         </ChakraLink>
       </Box>
-      <HStack
-        zIndex={10}
-        w="100%"
-        justify="center"
-        spacing="20px"
-        borderRadius="5px"
-        p="10px"
-        bg="blackAlpha.100"
-        pos="sticky"
-        top="5px"
-        alignItems="center"
-        position="absolute"
-      >
+      <Box display="flex" flexDirection="row" gap="15px" flex={2}>
         {NAVS.map((nav) => {
           const isActive = checkIsActive(nav.to)
           return (
             <Link style={{ cursor: "pointer" }} key={nav.to} to={nav.to}>
               <VStack
-                fontSize="1.3rem"
-                fontWeight="bold"
+                fontSize={{ lg: "1.3rem", md: "0.9rem", sm: "0.9rem" }}
                 spacing="0"
                 transition="0.2s ease-in"
-                color={isActive ? "blue.400" : "black"}
+                color={isActive ? "blue.400" : "rgb(0,59,90)"}
               >
                 <Text
                   textUnderlineOffset={5}
@@ -97,7 +113,7 @@ export const Navigations: React.FC = () => {
             </Link>
           )
         })}
-      </HStack>
-    </Box>
+      </Box>
+    </HStack>
   )
 }

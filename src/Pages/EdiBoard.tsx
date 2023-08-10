@@ -19,6 +19,7 @@ export const EdBoard: React.FC = () => {
               src="/adnsu.png"
               boxShadow=" 5px 10px 12px #888888"
               height="150px"
+              borderRadius="15px"
             ></Image>
             <Text marginTop="10px">
               Azerbaijan State Oil and Industry University
@@ -30,6 +31,7 @@ export const EdBoard: React.FC = () => {
               boxShadow=" 5px 10px 12px #888888"
               height="200px"
               width="150px"
+              borderRadius="15px"
             ></Image>
             <Tooltip label="Azerbaijan Scientific-Research & Design Prospecting Power Engineering Institute">
               <Text marginTop="10px" marginLeft="-40px">
@@ -43,6 +45,7 @@ export const EdBoard: React.FC = () => {
               bg="rgb(19,29,100)"
               boxShadow=" 5px 10px 12px #888888"
               height="150px"
+              borderRadius="15px"
             ></Image>{" "}
             <Center>
               <Text marginTop="10px">Azerbaijan Technical University</Text>

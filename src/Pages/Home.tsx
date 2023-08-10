@@ -1,4 +1,4 @@
-import { Box, Center, Image, SimpleGrid, Text } from "@chakra-ui/react"
+import { Box, Center, Image, Link, SimpleGrid, Text } from "@chakra-ui/react"
 import React from "react"
 import { Grid, GridItem } from "@chakra-ui/react"
 export const Home: React.FC = () => {
@@ -36,12 +36,38 @@ export const Home: React.FC = () => {
               boxShadow=" 5px 10px 12px #888888"
               borderRadius="8px"
             ></Image>
-            <Image
+            <Link href="https://www.aztu.edu.az/az/page/prorektorlar-107">
+              <Text
+                marginTop="2rem"
+                textAlign="justify"
+                fontWeight="bold"
+                bg="rgb(210,210,210)"
+                width="150px"
+                cursor="pointer"
+                borderRadius="5px"
+                boxShadow="  5px 1px 60px #888888"
+              >
+                Nurali A. Yusifbayli
+              </Text>
+            </Link>
+
+            <Text fontWeight="bold" marginTop="0.4rem">
+              Vice-rector of Azerbaijan Technical University
+            </Text>
+            <Text fontWeight="bold">
+              Doctor of technical science, professor
+            </Text>
+            <Text marginTop="0.8rem" fontWeight="bold">
+              25 Hussein Javid avanue
+            </Text>
+            <Text fontWeight="bold">Baku, Azerbaijan</Text>
+            <Text fontWeight="bold">Phone: (+99412) 538 94 76</Text>
+            {/* <Image
               marginTop="2rem"
               src="/back.jpeg"
               boxShadow=" 5px 10px 12px #888888"
               width={{ lg: "400px", md: "400px", sm: "800px" }}
-            ></Image>
+            ></Image> */}
           </Box>
           <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
             <Text color={{ md: "red" }}>Dear Colleagues, </Text>
@@ -102,20 +128,6 @@ export const Home: React.FC = () => {
               journal of “ELECTROENERGETICS, ELECTROTECHNICS, ELECTROMECHANICS +
               CONTROL”.
             </Text>
-            <Text marginTop="0.8rem" textAlign="justify" fontWeight="bold">
-              Nurali A. Yusifbayli
-            </Text>
-            <Text fontWeight="bold">
-              Vice-rector of Azerbaijan Technical University
-            </Text>
-            <Text fontWeight="bold">
-              Doctor of technical science, professor
-            </Text>
-            <Text marginTop="0.8rem" fontWeight="bold">
-              25 Hussein Javid avanue
-            </Text>
-            <Text fontWeight="bold">Baku, Azerbaijan</Text>
-            <Text fontWeight="bold">Phone: (+99412) 538 94 76</Text>
           </Box>
         </Box>
       </Center>
