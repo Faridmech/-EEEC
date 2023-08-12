@@ -1,5 +1,6 @@
 import { Box, Button, Center, Input, Text, VStack } from "@chakra-ui/react"
-import { ElementType, useRef, useState } from "react"
+import { useRef, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export const Contact: React.FC = () => {
   const [selectedDocs, setSelectedDocs] = useState<File[]>([])
@@ -23,10 +24,11 @@ export const Contact: React.FC = () => {
     functions.forEach((func) => func())
   }
 
+  const { t } = useTranslation()
   return (
     <Box h="100%">
       <Text textAlign="center" fontSize="2rem" color="rgb(0,39,110)" mt="2rem">
-        Greeting!!! Here you can contact us and upload your recent paper{" "}
+        {t("title")}
       </Text>
       <Center>
         <Box

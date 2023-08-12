@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom"
-
+import "../i18n/config"
 import {
   Box,
-  Center,
   HStack,
   Text,
   Tooltip,
@@ -30,7 +29,7 @@ export const Navigations: React.FC = () => {
       flexDirection="column"
       alignContent="space-between"
     >
-      <Box display="flex" flexDirection="row" justifyContent="space-between">
+      <HStack justify="space-around" w="100%">
         <Box
           display="flex"
           alignItems="center"
@@ -39,30 +38,30 @@ export const Navigations: React.FC = () => {
           bg="rgb(0,49,119)"
           borderRadius="5px"
         >
-          <Tooltip label="ELECTROENERGETICS, ELECTROTECHNICS, ELECTROMECHANICS + CONTROL">
-            <Text
-              color="white"
-              fontWeight="bold"
-              fontSize="1.6rem"
-              margin="0"
-              padding="0"
-            >
+          <Tooltip
+            label="ELECTROENERGETICS, ELECTROTECHNICS, ELECTROMECHANICS + CONTROL"
+            hasArrow
+          >
+            <Text color="white" fontWeight="bold" fontSize="1.6rem">
               EEEC
             </Text>
           </Tooltip>
         </Box>
-        <Box display="flex" gap="13px" alignItems="center">
-          <ChakraLink href="http://asoiu.edu.az/">
+        <HStack
+          alignItems="center"
+          gap={{ lg: "5rem", md: "3rem", sm: "1rem" }}
+          ml={{ lg: "10rem", md: "6rem", sm: "3rem" }}
+        >
+          <ChakraLink href="http://asoiu.edu.az/" width="fit-content">
             <Tooltip
               label=" Azerbaijan State Oil and Industry University"
               hasArrow
             >
               <Image
-                marginLeft="1rem"
                 src="/adnsu.png"
                 borderRadius="10%"
                 height={{ lg: "45px", md: "35px", sm: "35px" }}
-              ></Image>
+              />
             </Tooltip>
           </ChakraLink>
           <ChakraLink href=" http://azenerji.com/en/about/pei.html">
@@ -88,7 +87,7 @@ export const Navigations: React.FC = () => {
               ></Image>
             </Tooltip>
           </ChakraLink>
-        </Box>
+        </HStack>
 
         <Box display="flex" flexDirection="row" gap="10px" alignItems="center">
           <Box>
@@ -106,11 +105,12 @@ export const Navigations: React.FC = () => {
             cursor="pointer"
             pt="4px"
             pl="9px"
+            ml={{ lg: "2rem", md: "1.4rem", sm: "0.5rem" }}
           >
             <GrUserAdmin />
           </Box>
         </Box>
-      </Box>
+      </HStack>
 
       <Box display="flex" flexDirection="row" gap="15px">
         {NAVS.map((nav) => {
@@ -118,7 +118,7 @@ export const Navigations: React.FC = () => {
           return (
             <Link style={{ cursor: "pointer" }} key={nav.to} to={nav.to}>
               <VStack
-                fontSize={{ lg: "1.2rem", md: "0.9rem", sm: "0.7rem" }}
+                fontSize={{ lg: "1.2rem", md: "1rem", sm: "0.9rem" }}
                 spacing="0"
                 transition="0.2s ease-in"
                 color={isActive ? "blue.400" : "rgb(0,59,90)"}
