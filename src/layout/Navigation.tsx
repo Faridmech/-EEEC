@@ -9,14 +9,21 @@ import {
   Link as ChakraLink,
   Select,
 } from "@chakra-ui/react"
-import React from "react"
+import React, { ChangeEvent, useState } from "react"
 import { NAVS } from "./const"
 import { useIsActiveRoute } from "./hooks"
 import { Image } from "@chakra-ui/react"
 import { GrUserAdmin } from "react-icons/gr"
-
+import { changeLanguage } from "i18next"
+interface IProps {
+  langValue: string
+}
 export const Navigations: React.FC = () => {
   const { checkIsActive } = useIsActiveRoute()
+
+  const langValueHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+    changeLanguage(e.target.value)
+  }
 
   return (
     <HStack
@@ -91,7 +98,7 @@ export const Navigations: React.FC = () => {
 
         <Box display="flex" flexDirection="row" gap="10px" alignItems="center">
           <Box>
-            <Select>
+            <Select onChange={(e) => langValueHandler(e)}>
               <option value="en">🇺🇸 English</option>
               <option value="az">🇦🇿 Azərbaycan</option>
             </Select>

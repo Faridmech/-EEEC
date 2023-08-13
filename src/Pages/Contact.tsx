@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
     functions.forEach((func) => func())
   }
 
-  const { t } = useTranslation()
+  const { t } = useTranslation("ns1")
   return (
     <Box h="100%">
       <Text textAlign="center" fontSize="2rem" color="rgb(0,39,110)" mt="2rem">
@@ -45,7 +45,7 @@ export const Contact: React.FC = () => {
         >
           <Center w="100%" h="100%">
             <VStack spacing="30px" w="100%" align="start">
-              <Input placeholder="Name &  Coauthor's name" />
+              <Input placeholder={t("description.part3")} />
               <Input placeholder="Article's name" />
               <Input placeholder="E-mail adress" />
               <Input
