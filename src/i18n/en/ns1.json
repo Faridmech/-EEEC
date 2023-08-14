@@ -1,8 +1,12 @@
 {
-  "title": "Welcome to react using react-i18next fully type-safe",
+  "title": "Send us your article by filling out the form below",
+  "title2": "Contact",
   "description": {
-    "part1": "This is a simple example.",
-    "part2": "😉",
-    "part3": "5"
+    "part1": "Name && Coauthor name",
+    "part2": "Article's name ",
+    "part3": "E-mail address",
+    "part4": "Select file",
+    "part5": "Submit",
+    "part6": "No choosen file"
   }
 }

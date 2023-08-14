@@ -45,9 +45,9 @@ export const Contact: React.FC = () => {
         >
           <Center w="100%" h="100%">
             <VStack spacing="30px" w="100%" align="start">
+              <Input placeholder={t("description.part1")} />
+              <Input placeholder={t("description.part2")} />
               <Input placeholder={t("description.part3")} />
-              <Input placeholder="Article's name" />
-              <Input placeholder="E-mail adress" />
               <Input
                 ref={fileInputRef as any}
                 type="file"
@@ -70,14 +70,13 @@ export const Contact: React.FC = () => {
                   fontSize="14px"
                   onClick={handleButton}
                 >
-                  Select files
+                  {t("description.part4")}
                 </Button>
-                <Text>{fileName}</Text>
+                <Text>{fileName ? t("description.part6") : null}</Text>
               </Box>
 
               <Button type="submit" variant="outline" fontSize="14px">
-                {" "}
-                Submit
+                {t("description.part5")}
               </Button>
             </VStack>
           </Center>

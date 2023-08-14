@@ -1,8 +1,12 @@
 {
-  "title": "A",
+  "title": "Aşağıdakı formu dolduraraq  məqalələnizi bizə göndərin",
+  "title2": "Əlaqə",
   "description": {
-    "part1": " Aşağıdakı formu dolduraraq  məqalələnizi bizə göndərin",
-    "part2": "Adınız & Həmmüəlliflərin adı",
-    "part3": "Məqalənin adı"
+    "part1": "Ad && həmmüəllifin adı",
+    "part2": "Məqalənin adı",
+    "part3": "Email ünvanı",
+    "part4": "Faylı seçin",
+    "part5": "Göndər",
+    "part6": "Seçilmiş fayl yoxdur"
   }
 }

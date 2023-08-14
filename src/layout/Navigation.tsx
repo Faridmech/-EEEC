@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "../i18n/config"
+import { useTranslation } from "react-i18next"
 import {
   Box,
   HStack,
@@ -9,7 +10,7 @@ import {
   Link as ChakraLink,
   Select,
 } from "@chakra-ui/react"
-import React, { ChangeEvent, useState } from "react"
+import React, { ChangeEvent } from "react"
 import { NAVS } from "./const"
 import { useIsActiveRoute } from "./hooks"
 import { Image } from "@chakra-ui/react"
@@ -24,7 +25,7 @@ export const Navigations: React.FC = () => {
   const langValueHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     changeLanguage(e.target.value)
   }
-
+  const { t } = useTranslation("ns1")
   return (
     <HStack
       zIndex={10}
