@@ -1,0 +1,16 @@
+{
+  "title": "ƏLYAZMA TƏLƏBLƏRİ",
+
+  "description": {
+    "part1": "Əlyazmanın birinci səhifəsində UDC indeksi (sola düzülmək), müəllifin adı, atasının adı və soyadı, həmmüəlliflərin adı, başlıq daxil edilməlidir. Əlyazmada boşluqlar və 5-6 açar sözlər daxil olmaqla 400-600 simvola qədər abstrakt olmalıdır.",
+    "part2": "Məqalənin adı, avtoreferat və müəlliflərin adları rus və ingilis dillərində hazırlanmalı və əlyazmanın əvvəlində təqdim edilməlidir.",
+    "part3": "Əlyazma strukturlaşdırılmalıdır. Standart struktur tövsiyə olunur: giriş, tədqiqat məqsədləri (problemin ifadəsi daxil olmaqla), nəticələr (əsas hissə), müzakirə, nəticə.",
+    "part4": "Əlyazmanın mətni çap şəklində və elektron daşıyıcılarda təqdim edilməlidir. Mətn müvafiq olaraq formatlaşdırılmalıdır: Times New Roman, 12 pt, 1,15 interval, bütün kənarlar 2 sm. Səhifələr sağ altdan nömrələnməlidir. Əlyazmanın həcmi rəqəmlər, cədvəl və istinadlar daxil olmaqla 10-15 A4 səhifədən çox olmamalıdır və ya boşluqlar daxil olmaqla 40 000 simvoldan çox olmamalıdır. Tövsiyə olunan rəqəmlərin sayı 2-3-dür.",
+    "part5": "Cədvəllər əlyazmanın gövdəsindədir, 1,15 intervalla formatlanmış, 11 pt.",
+    "part6": "Düsturların nömrələnməsi məqalə boyu davamlı olmalı və sağ tərəfdə artan qaydada mötərizədə (1, 2 və s. rəqəmlərlə) göstərilməlidir.",
+    "part7": "İllüstrasiyalar əlyazmanın mətnində elektron formada təqdim edilməlidir. Rəqəmlərdə lazımsız hissələrdən və yazılardan qaçınmaq lazımdır, burada bütün yazılar rəqəmlər və ya hərflərlə əvəz edilməlidir. Bütün rəqəmlərə istinad edilməli və başlıqlarda və ya mətndə izah edilməlidir. Şəkillərdəki xətlər aydın olmalıdır (5-6 pix), fiqurların eni 140 mm, hündürlüyü 200 mm-dən çox olmamalıdır. Rəqəmlərdə hərf və rəqəmlərin şrifti Times New Roman (9-10 pt) olmalıdır. Rəqəmlər qara və ağ olmalıdır, müxtəlif növ lyuklarla (rəqəmlərin daha da azaldılmasına imkan vermək üçün).",
+    "part8": "Şəkil başlıqları əlyazmanın mətnində 1,15 interval, 12 pt formatda verilmişdir.",
+    "part9": "Lazımi istinadların siyahısı əlyazmanın sonunda ərəb rəqəmləri ilə ardıcıl nömrələnməlidir. Başqa mənbələrdən olan materiallardan istifadə edərkən bu mənbələrə düzgün istinad tələb olunur. Əlyazmanın mətnində istinadlar kvadrat mötərizədə göstərilməlidir [1]. İstinad siyahısında biblioqrafik təsvir aşağıdakı ardıcıllıqla verilir: Monoqrafiya (kitab): müəllif(lərin) soyadı, adı, baş hərfləri, monoqrafiyanın tam adı, nəşr yeri, nəşriyyatı, nəşr ili; Dövri nəşrlər üçün – müəllif(lər)in soyadı, inisialları, məqalənin adı, jurnalın adı, nəşr ili, həcmi, nömrəsi, səhifələri. Rus dilində biblioqrafik təsvir də latın transliterasiyası ilə təqdim edilməlidir.",
+    "part10": "Ədəbiyyat siyahısından sonra müəllif(lər) haqqında məlumat verilməlidir: vəzifə, elmi dərəcə, vəzifə, e-mail və ya əlaqə telefonu."
+  }
+}

@@ -2,6 +2,7 @@ import { Box, Heading, Image, Text, Center, Input } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import React from "react"
 import dataF from "./data.json"
+import { useTranslation } from "react-i18next"
 
 interface IProps {
   title: string
@@ -36,12 +37,14 @@ export const Archive: React.FC = () => {
     setFilteredData(filteredItems)
   }, [searchText])
 
+  const { t } = useTranslation("ns4")
+
   return (
     <>
       <Center marginTop="2rem">
         <Input
           type="text"
-          placeholder="Search author name || article name"
+          placeholder={t("title")}
           mt="1rem"
           mb="1.5rem"
           value={searchText}
