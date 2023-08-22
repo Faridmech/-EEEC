@@ -1,10 +1,12 @@
 import { Box, Text, Center, Image, Tooltip, Link } from "@chakra-ui/react"
 import React from "react"
+import { useTranslation } from "react-i18next"
 
 export const EdBoard: React.FC = () => {
+  const { t } = useTranslation("ns5")
   return (
     <Box>
-      <Center>
+      {/* <Center>
         <Box
           marginTop="3rem"
           marginBottom="7rem"
@@ -52,7 +54,7 @@ export const EdBoard: React.FC = () => {
             </Center>
           </Box>
         </Box>
-      </Center>{" "}
+      </Center>{" "} */}
       <Center>
         <Box display="flex" flexDirection="column">
           <Box
@@ -60,18 +62,19 @@ export const EdBoard: React.FC = () => {
             height="10px"
             bg="blue.300"
             borderRadius="4px"
+            mt="2rem"
           ></Box>
           <Center>
             <Box display="flex" flexDirection="column" textAlign="center">
               <Text fontSize="30px" color="blue" fontWeight="bold">
-                ELECTROENERGETICS, ELECTROTECHNICS
+                {t("title")}
               </Text>
 
               <Text fontSize="30px" color="blue" fontWeight="bold">
-                ELECTROMECHANICS + CONTROL
+                {t("title1")}
               </Text>
               <Text fontSize="30px" color="red" fontWeight="bold">
-                Scientific – Industrial Journal
+                {t("title2")}
               </Text>
             </Box>
           </Center>
@@ -96,10 +99,10 @@ export const EdBoard: React.FC = () => {
         >
           <Center>
             <Text fontSize="2rem" fontWeight="bold" textDecoration="none">
-              Editor in-Chief
+              {t("description.part2")}
             </Text>
           </Center>
-          <Tooltip label="Doctor of Thecnical Science, Professor , Click for  a wide information">
+          <Tooltip label={t("description.part45")}>
             <Link
               href="https://en.wikipedia.org/wiki/Nurali_Yusifbayli"
               textDecoration="none"
@@ -111,7 +114,7 @@ export const EdBoard: React.FC = () => {
                 paddingLeft="4px"
                 textDecoration="none"
               >
-                Nurali Yusifbayli (Baku, Azerbaijan)
+                {t("description.part1")}
               </Text>
             </Link>
           </Tooltip>
@@ -134,16 +137,16 @@ export const EdBoard: React.FC = () => {
             textDecoration="none"
             textAlign="center"
           >
-            Deputy Editors in-Chief
+            {t("description.part3")}
           </Text>
-          <Text fontSize="1.4rem">Valiyev Vilayat (Baku, Azerbaijan)</Text>
+          <Text fontSize="1.4rem">{t("description.part4")}</Text>
           <Text
             border="2px solid black"
-            width="360px"
+            width="380px"
             fontSize="1.4rem"
             fontWeight="bold"
           >
-            Huseynov Asaf (Baku, Azerbaijan)
+            {t("description.part5")}
           </Text>
         </Box>
       </Center>
@@ -153,7 +156,7 @@ export const EdBoard: React.FC = () => {
           border="1px solid rgb(0,39,110)"
           marginTop="2rem"
           width="1200px"
-          height={{ lg: "310px", md: "520px", sm: "520px" }}
+          height={{ lg: "360px", md: "520px", sm: "520px" }}
           boxShadow="5px 10px 6px #888888"
           borderRadius="10px"
           paddingLeft="4px"
@@ -167,7 +170,7 @@ export const EdBoard: React.FC = () => {
               textAlign="center"
               marginBottom="2.8rem"
             >
-              International Advisory Board
+              {t("description.part6")}
             </Text>
             <Box
               display="flex"
@@ -176,14 +179,14 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Babanli Mustafa (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem"> {t("description.part7")}</Text>
               <Text
                 border="2px solid black"
                 width="380px"
                 fontSize="1.4rem"
                 fontWeight="bold"
               >
-                Arif Mehtiyev (Baku, Azerbaijan)
+                {t("description.part8")}
               </Text>
             </Box>
             <Box
@@ -193,9 +196,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Hashimov Arif (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem"> {t("description.part9")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Aliguliyev Rasim (Baku, Azerbaijan)
+                {t("description.part10")}
               </Text>
             </Box>
 
@@ -206,9 +209,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Aliyev Telman (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem">{t("description.part11")}</Text>
               <Text fontSize="1.4rem" width={{ lg: "380px" }}>
-                Chetin Elmas (Turkey)
+                {t("description.part12")}
               </Text>
             </Box>
             <Box
@@ -218,9 +221,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Kumbaroglu Gurkan (USA)</Text>
+              <Text fontSize="1.4rem"> {t("description.part13")}</Text>
               <Text fontSize="1.4rem" width={{ lg: "380px" }}>
-                Ayuyev Boris (Russia)
+                {t("description.part14")}
               </Text>
             </Box>
             <Box
@@ -230,10 +233,19 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Voropay Nikolay (Russia)</Text>
+              <Text fontSize="1.4rem"> {t("description.part15")}</Text>
               <Text fontSize="1.4rem" width={{ lg: "380px" }}>
-                Ozdemir Aydogan (Istanbul,Turkey)
+                {t("description.part16")}
               </Text>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem"> {t("description.part26")}</Text>
             </Box>
           </Box>
         </Box>
@@ -244,7 +256,7 @@ export const EdBoard: React.FC = () => {
           border="1px solid rgb(0,39,110)"
           marginTop="2rem"
           width="1200px"
-          height={{ lg: "570px", md: "900px", sm: "900px" }}
+          height={{ lg: "540px", md: "900px", sm: "900px" }}
           boxShadow="5px 10px 6px #888888"
           borderRadius="10px"
           paddingLeft="4px"
@@ -258,7 +270,7 @@ export const EdBoard: React.FC = () => {
               textAlign="center"
               marginBottom="2.8rem"
             >
-              Editorial Board
+              {t("description.part17")}
             </Text>
             <Box
               display="flex"
@@ -267,9 +279,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Aliyev Aydin (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem">{t("description.part18")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Guliyev Huseyngulu (Baku,Azerbaijan)
+                {t("description.part19")}
               </Text>
             </Box>
             <Box
@@ -279,9 +291,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Ahmadov Elbrus (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem">{t("description.part20")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Hasanov Zakir (Baku, Azerbaijan)
+                {t("description.part21")}
               </Text>
             </Box>
             <Box
@@ -291,9 +303,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Abdullayev Kamal (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem">{t("description.part22")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Lazimov Tahir (Baku, Azerbaijan)
+                {t("description.part23")}
               </Text>
             </Box>
             <Box
@@ -303,11 +315,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">
-                Agamaliyev Mukhtar (Baku, Azerbaijan)
-              </Text>
+              <Text fontSize="1.4rem">{t("description.part24")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Musayev Musavar (Baku, Azerbaijan)
+                {t("description.part25")}
               </Text>
             </Box>
             <Box
@@ -317,9 +327,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Aliyev Fikret (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem">{t("description.part26")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Nasibov Valeh (Baku, Azerbaijan)
+                {t("description.part27")}
               </Text>
             </Box>
             <Box
@@ -329,9 +339,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Abullayev Yashar (Baku, Azerbaijan)</Text>
+              <Text fontSize="1.4rem">{t("description.part28")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Nurubayli Zulfugar (Baku, Azerbaijan)
+                {t("description.part29")}
               </Text>
             </Box>
             <Box
@@ -341,11 +351,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">
-                Dimirovski Georgi (Skopje, Macedonia)
-              </Text>
+              <Text fontSize="1.4rem">{t("description.part30")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Rajabli Kamran (USA)
+                {t("description.part31")}
               </Text>
             </Box>
             <Box
@@ -355,9 +363,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Izykowski Jan (Poland)</Text>
+              <Text fontSize="1.4rem">{t("description.part32")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Rahmanov Nariman (Baku, Azerbaijan)
+                {t("description.part33")}
               </Text>
             </Box>
             <Box
@@ -367,9 +375,9 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">Ilyushin Pavel (Russia)</Text>
+              <Text fontSize="1.4rem">{t("description.part34")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Tabatabaei Naser (Iran)
+                {t("description.part35")}
               </Text>
             </Box>
             <Box
@@ -379,21 +387,10 @@ export const EdBoard: React.FC = () => {
               justifyContent="space-between"
               marginBottom="10px"
             >
-              <Text fontSize="1.4rem">
-                Farhadzadeh Elmar (Baku, Azerbaijan)
-              </Text>
+              <Text fontSize="1.4rem">{t("description.part36")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
-                Yerokhin Pyotr (Russia)
+                {t("description.part37")}
               </Text>
-            </Box>
-            <Box
-              display="flex"
-              flexDirection={{ lg: "row", md: "column", sm: "column" }}
-              alignItems="center"
-              justifyContent="space-between"
-              marginBottom="10px"
-            >
-              <Text fontSize="1.4rem">Guliyev Askar (Baku, Azerbaijan)</Text>
             </Box>
           </Box>
         </Box>
@@ -419,11 +416,11 @@ export const EdBoard: React.FC = () => {
             marginBottom="7px"
           >
             <Text fontSize="2rem" fontWeight="bold">
-              Executive Editors
+              {t("description.part39")}
             </Text>
 
-            <Text fontSize="1.4rem">Yusifbayli Fidan (Baku Azerbaijan)</Text>
-            <Text fontSize="1.4rem">Marufov Ilkin (Baku, Azerbaijan)</Text>
+            <Text fontSize="1.4rem">{t("description.part40")}</Text>
+            <Text fontSize="1.4rem">{t("description.part41")}</Text>
           </Box>
 
           <Box
@@ -435,10 +432,10 @@ export const EdBoard: React.FC = () => {
             marginBottom="7px"
           >
             <Text fontSize="2rem" fontWeight="bold">
-              Editorial Assistants
+              {t("description.part42")}
             </Text>
-            <Text fontSize="1.4rem">Huseynli Farid (Baku, Azerbaijan)</Text>
-            <Text fontSize="1.4rem">Marufov Ilkin (Baku, Azerbaijan)</Text>
+            <Text fontSize="1.4rem">{t("description.part44")}</Text>
+            <Text fontSize="1.4rem">{t("description.part43")}</Text>
           </Box>
         </Box>
       </Center>

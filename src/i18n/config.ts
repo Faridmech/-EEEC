@@ -12,6 +12,9 @@ import zs3 from "./az/zs3.json"
 import ns4 from "./en/ns4.json"
 import zs4 from "./az/zs4.json"
 
+import ns5 from "./en/ns5.json"
+import zs5 from "./az/zs5.json"
+
 export const defaultNS = "ns1"
 
 i18next.use(initReactI18next).init({
@@ -23,12 +26,14 @@ i18next.use(initReactI18next).init({
       ns2,
       ns3,
       ns4,
+      ns5,
     },
     az: {
       ns1: zs1,
       ns2: zs2,
       ns3: zs3,
       ns4: zs4,
+      ns5: zs5,
     },
   },
   defaultNS,
