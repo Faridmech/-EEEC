@@ -256,7 +256,7 @@ export const EdBoard: React.FC = () => {
           border="1px solid rgb(0,39,110)"
           marginTop="2rem"
           width="1200px"
-          height={{ lg: "540px", md: "900px", sm: "900px" }}
+          height={{ lg: "610px", md: "900px", sm: "900px" }}
           boxShadow="5px 10px 6px #888888"
           borderRadius="10px"
           paddingLeft="4px"
@@ -391,6 +391,29 @@ export const EdBoard: React.FC = () => {
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part37")}
               </Text>
+            </Box>
+
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">{t("description.part38")}</Text>
+              <Text width={{ lg: "380px" }} fontSize="1.4rem">
+                {t("description.part47")}
+              </Text>
+            </Box>
+
+            <Box
+              display="flex"
+              flexDirection={{ lg: "row", md: "column", sm: "column" }}
+              alignItems="center"
+              justifyContent="space-between"
+              marginBottom="10px"
+            >
+              <Text fontSize="1.4rem">{t("description.part48")}</Text>
             </Box>
           </Box>
         </Box>
