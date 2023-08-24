@@ -56,6 +56,9 @@ export const Home: React.FC = () => {
             <Text marginTop="0.8rem" textAlign="justify">
               {t("description.part11")}
             </Text>
+            <Text marginTop="0.8rem" textAlign="justify">
+              {t("description.part12")}
+            </Text>
           </Box>
         </Box>
       </Center>
