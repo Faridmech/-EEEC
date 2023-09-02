@@ -8,5 +8,12 @@
     "part4": "Faylı seçin",
     "part5": "Göndər",
     "part6": "Seçilmiş fayl yoxdur"
+  },
+  "nav": {
+    "home": "Ana səyfə",
+    "editorial_board": "Redaksiya heyyəti",
+    "for_author": "Yazıçılar üçün",
+    "archive": "Arxiv",
+    "contact": "Əlaqə"
   }
 }

@@ -1,1 +1,1 @@
-export type TNavs = {to:string; name:string}[]
+export type Test = {}

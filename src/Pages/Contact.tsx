@@ -1,16 +1,11 @@
 import { Box, Button, Center, Input, Text, VStack } from "@chakra-ui/react"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 export const Contact: React.FC = () => {
   const [selectedDocs, setSelectedDocs] = useState<File[]>([])
-  const [fileName, setFileName] = useState<string[]>(["No choosen file"])
+  const [files, setFile] = useState<FileList | null>()
   const fileInputRef = useRef<HTMLInputElement>(null)
-
-  const onClickFileNamesetter = () => {
-    const selectedFileNames = selectedDocs.map((item) => item.name)
-    setFileName(selectedFileNames)
-  }
 
   const onClickFileUploadHandler = () => {
     if (fileInputRef.current) {
@@ -18,11 +13,11 @@ export const Contact: React.FC = () => {
     }
   }
 
-  const functions = [onClickFileUploadHandler, onClickFileNamesetter]
-
   const handleButton = () => {
-    functions.forEach((func) => func())
+    onClickFileUploadHandler()
   }
+
+  console.log("files", files)
 
   const { t } = useTranslation("ns1")
   return (
@@ -54,9 +49,8 @@ export const Contact: React.FC = () => {
                 accept=".pdf"
                 display="none"
                 multiple
-                onChange={(el) => {
-                  el.target.files?.length &&
-                    setSelectedDocs(Array.from(el.target.files))
+                onChange={(e) => {
+                  setFile(e.target.files)
                 }}
               />
               <Box
@@ -72,7 +66,8 @@ export const Contact: React.FC = () => {
                 >
                   {t("description.part4")}
                 </Button>
-                <Text>{fileName ? t("description.part6") : null}</Text>
+                <Text>{!files?.length && t("description.part6")}</Text>
+                <Text>{files?.length && files[0].name}</Text>
               </Box>
 
               <Button type="submit" variant="outline" fontSize="14px">

@@ -8,5 +8,12 @@
     "part4": "Select file",
     "part5": "Submit",
     "part6": "No choosen file"
+  },
+  "nav": {
+    "home": "Home",
+    "editorial_board": "Editirol Board",
+    "for_author": "For Author",
+    "archive": "Archive",
+    "contact": "Contact"
   }
 }

@@ -1,9 +1,7 @@
-import { TNavs } from "./models"
-
-export const NAVS: TNavs = [
-  { to: "/", name: "Home" },
-  { to: "/edboard", name: "Editorial Board" },
-  { to: "/forauthor", name: "For Author" },
-  { to: "/archive", name: "Archive" },
-  { to: "/contact", name: "Contact" },
-]
+export const NAVS = [
+  { to: "/", name: "home" },
+  { to: "/edboard", name: "editorial_board" },
+  { to: "/forauthor", name: "for_author" },
+  { to: "/archive", name: "archive" },
+  { to: "/contact", name: "contact" },
+] as const

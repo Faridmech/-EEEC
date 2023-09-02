@@ -81,7 +81,7 @@ export const Navigations: React.FC = () => {
                 src="/Area.png"
                 borderRadius="10%"
                 height={{ lg: "45px", md: "35px", sm: "35px" }}
-              ></Image>
+              />
             </Tooltip>
           </ChakraLink>
           <ChakraLink href="https://www.aztu.edu.az/en">
@@ -92,7 +92,7 @@ export const Navigations: React.FC = () => {
                 bg="rgb(19,29,100)"
                 height={{ lg: "45px", md: "35px", sm: "35px" }}
                 width="80px"
-              ></Image>
+              />
             </Tooltip>
           </ChakraLink>
         </HStack>
@@ -136,7 +136,7 @@ export const Navigations: React.FC = () => {
                   transition="0.05s ease-in"
                   textDecoration={isActive ? "underline" : "unset"}
                 >
-                  {nav.name}
+                  {t(`nav.${nav.name}`)}
                 </Text>
               </VStack>
             </Link>
