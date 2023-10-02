@@ -1,9 +1,29 @@
 import { Box, Button, Center, Input, Text, VStack } from "@chakra-ui/react"
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
+import axios from "axios"
+import React from "react"
 
 export const Contact: React.FC = () => {
-  const [selectedDocs, setSelectedDocs] = useState<File[]>([])
+  const [recepient_email, setRecepientEmail] = useState("")
+  const [name, setName] = useState("")
+  const [articleName, setArticleName] = useState("")
+
+  // function sendMail() {
+  //   if (recepient_email && name && articleName) {
+  //     axios
+  //       .post("http://localhost:3003/eeec.az", {
+  //         recepient_email,
+  //         name,
+  //         articleName,
+  //       })
+  //       .then(() => alert("Succesful"))
+  //       .catch(() => alert("not right"))
+  //     return
+  //   }
+  //   return alert("Fill all the gap")
+  // }
+
   const [files, setFile] = useState<FileList | null>()
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -16,8 +36,6 @@ export const Contact: React.FC = () => {
   const handleButton = () => {
     onClickFileUploadHandler()
   }
-
-  console.log("files", files)
 
   const { t } = useTranslation("ns1")
   return (
@@ -40,9 +58,18 @@ export const Contact: React.FC = () => {
         >
           <Center w="100%" h="100%">
             <VStack spacing="30px" w="100%" align="start">
-              <Input placeholder={t("description.part1")} />
-              <Input placeholder={t("description.part2")} />
-              <Input placeholder={t("description.part3")} />
+              <Input
+                placeholder={t("description.part1")}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Input
+                placeholder={t("description.part2")}
+                onChange={(e) => setArticleName(e.target.value)}
+              />
+              <Input
+                placeholder={t("description.part3")}
+                onChange={(e) => setRecepientEmail(e.target.value)}
+              />
               <Input
                 ref={fileInputRef as any}
                 type="file"
