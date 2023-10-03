@@ -1,42 +1,61 @@
-import { Box, Button, Center, Input, Text, VStack } from "@chakra-ui/react"
-import { useEffect, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
+import {
+  Box,
+  Button,
+  Center,
+  FormControl,
+  Input,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
-import axios from "axios"
-import React from "react"
+
+interface FormValues {
+  name: string
+  articleName: string
+  recepient_email: string
+}
+
+const initValues: FormValues = {
+  name: "",
+  articleName: "",
+  recepient_email: "",
+}
+
+const initState = { values: initValues }
 
 export const Contact: React.FC = () => {
-  const [recepient_email, setRecepientEmail] = useState("")
-  const [name, setName] = useState("")
-  const [articleName, setArticleName] = useState("")
+  const [state, setState] = useState(initState)
+  const { values } = state
 
-  // function sendMail() {
-  //   if (recepient_email && name && articleName) {
-  //     axios
-  //       .post("http://localhost:3003/eeec.az", {
-  //         recepient_email,
-  //         name,
-  //         articleName,
-  //       })
-  //       .then(() => alert("Succesful"))
-  //       .catch(() => alert("not right"))
-  //     return
-  //   }
-  //   return alert("Fill all the gap")
-  // }
+  const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { target } = event
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }))
+  }
+
+  const [touched, setTouched] = useState({})
+  const onBlur = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { target } = event
+    setTouched((prev) => ({ ...prev, [target.name]: true }))
+    console.log("tou", setTouched)
+  }
 
   const [files, setFile] = useState<FileList | null>()
   const fileInputRef = useRef<HTMLInputElement>(null)
-
   const onClickFileUploadHandler = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click()
     }
   }
-
   const handleButton = () => {
     onClickFileUploadHandler()
   }
-
   const { t } = useTranslation("ns1")
   return (
     <Box h="100%">
@@ -58,18 +77,40 @@ export const Contact: React.FC = () => {
         >
           <Center w="100%" h="100%">
             <VStack spacing="30px" w="100%" align="start">
-              <Input
-                placeholder={t("description.part1")}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <Input
-                placeholder={t("description.part2")}
-                onChange={(e) => setArticleName(e.target.value)}
-              />
-              <Input
-                placeholder={t("description.part3")}
-                onChange={(e) => setRecepientEmail(e.target.value)}
-              />
+              <FormControl isRequired isInvalid={touched.name && !values.name}>
+                <Input
+                  name="name"
+                  placeholder={t("description.part1")}
+                  onChange={onHandleChange}
+                  onBlur={onBlur}
+                  value={values.name}
+                />
+              </FormControl>
+
+              <FormControl
+                isRequired
+                isInvalid={touched.articleName && !values.articleName}
+              >
+                <Input
+                  name="articleName"
+                  placeholder={t("description.part2")}
+                  onChange={onHandleChange}
+                  onBlur={onBlur}
+                  value={values.articleName}
+                />
+              </FormControl>
+              <FormControl
+                isRequired
+                isInvalid={touched.recepient_email && !values.recepient_email}
+              >
+                <Input
+                  name="recepient_email"
+                  placeholder={t("description.part3")}
+                  onChange={onHandleChange}
+                  onBlur={onBlur}
+                  value={values.recepient_email}
+                />
+              </FormControl>
               <Input
                 ref={fileInputRef as any}
                 type="file"
@@ -107,3 +148,18 @@ export const Contact: React.FC = () => {
     </Box>
   )
 }
+
+// function sendMail() {
+//   if (recepient_email && name && articleName) {
+//     axios
+//       .post("http://localhost:3003/eeec.az", {
+//         recepient_email,
+//         name,
+//         articleName,
+//       })
+//       .then(() => alert("Succesful"))
+//       .catch(() => alert("not right"))
+//     return
+//   }
+//   return alert("Fill all the gap")
+// }
