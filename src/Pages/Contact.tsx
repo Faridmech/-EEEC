@@ -22,7 +22,7 @@ const initValues: FormValues = {
   recepient_email: "",
 }
 
-const initState = { values: initValues }
+const initState = { values: initValues as FormValues } // Type assertion
 
 export const Contact: React.FC = () => {
   const [state, setState] = useState(initState)
@@ -39,7 +39,8 @@ export const Contact: React.FC = () => {
     }))
   }
 
-  const [touched, setTouched] = useState({})
+  const [touched, setTouched] = useState<Record<string, boolean>>({})
+
   const onBlur = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { target } = event
     setTouched((prev) => ({ ...prev, [target.name]: true }))
@@ -57,6 +58,7 @@ export const Contact: React.FC = () => {
     onClickFileUploadHandler()
   }
   const { t } = useTranslation("ns1")
+
   return (
     <Box h="100%">
       <Text textAlign="center" fontSize="2rem" color="rgb(0,39,110)" mt="2rem">
@@ -73,8 +75,7 @@ export const Contact: React.FC = () => {
           flexDirection="row"
           p="40px"
           w="50%"
-          h="70%"
-        >
+          h="70%">
           <Center w="100%" h="100%">
             <VStack spacing="30px" w="100%" align="start">
               <FormControl isRequired isInvalid={touched.name && !values.name}>
@@ -89,8 +90,7 @@ export const Contact: React.FC = () => {
 
               <FormControl
                 isRequired
-                isInvalid={touched.articleName && !values.articleName}
-              >
+                isInvalid={touched.articleName && !values.articleName}>
                 <Input
                   name="articleName"
                   placeholder={t("description.part2")}
@@ -101,8 +101,7 @@ export const Contact: React.FC = () => {
               </FormControl>
               <FormControl
                 isRequired
-                isInvalid={touched.recepient_email && !values.recepient_email}
-              >
+                isInvalid={touched.recepient_email && !values.recepient_email}>
                 <Input
                   name="recepient_email"
                   placeholder={t("description.part3")}
@@ -125,13 +124,11 @@ export const Contact: React.FC = () => {
                 display="flex"
                 flexDirection="row"
                 gap="10px"
-                alignItems="center"
-              >
+                alignItems="center">
                 <Button
                   variant="outline"
                   fontSize="14px"
-                  onClick={handleButton}
-                >
+                  onClick={handleButton}>
                   {t("description.part4")}
                 </Button>
                 <Text>{!files?.length && t("description.part6")}</Text>
@@ -148,18 +145,3 @@ export const Contact: React.FC = () => {
     </Box>
   )
 }
-
-// function sendMail() {
-//   if (recepient_email && name && articleName) {
-//     axios
-//       .post("http://localhost:3003/eeec.az", {
-//         recepient_email,
-//         name,
-//         articleName,
-//       })
-//       .then(() => alert("Succesful"))
-//       .catch(() => alert("not right"))
-//     return
-//   }
-//   return alert("Fill all the gap")
-// }
