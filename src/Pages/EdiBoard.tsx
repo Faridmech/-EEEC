@@ -1,4 +1,4 @@
-import { Box, Text, Center, Image, Tooltip, Link } from "@chakra-ui/react"
+import { Box, Text, Center, Tooltip, Link } from "@chakra-ui/react"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
@@ -62,8 +62,7 @@ export const EdBoard: React.FC = () => {
             height="10px"
             bg="blue.300"
             borderRadius="4px"
-            mt="2rem"
-          ></Box>
+            mt="2rem"></Box>
           <Center>
             <Box display="flex" flexDirection="column" textAlign="center">
               <Text fontSize="30px" color="blue" fontWeight="bold">
@@ -83,8 +82,7 @@ export const EdBoard: React.FC = () => {
             width="1200px"
             height="10px"
             bg="blue.300"
-            borderRadius="4px"
-          ></Box>
+            borderRadius="4px"></Box>
         </Box>
       </Center>
       <Center>
@@ -95,8 +93,7 @@ export const EdBoard: React.FC = () => {
           height="100px"
           boxShadow="5px 10px 6px rgb(0,39,110)"
           borderRadius="10px"
-          cursor="pointer"
-        >
+          cursor="pointer">
           <Center>
             <Text fontSize="2rem" fontWeight="bold" textDecoration="none">
               {t("description.part2")}
@@ -105,15 +102,13 @@ export const EdBoard: React.FC = () => {
           <Tooltip label={t("description.part45")}>
             <Link
               href="https://en.wikipedia.org/wiki/Nurali_Yusifbayli"
-              textDecoration="none"
-            >
+              textDecoration="none">
               <Text
                 fontSize="1.5rem"
                 color="rgb(0,39,110)"
                 fontWeight="bold"
                 paddingLeft="4px"
-                textDecoration="none"
-              >
+                textDecoration="none">
                 {t("description.part1")}
               </Text>
             </Link>
@@ -129,14 +124,12 @@ export const EdBoard: React.FC = () => {
           height="130px"
           boxShadow="5px 10px 6px #888888"
           borderRadius="10px"
-          paddingLeft="4px"
-        >
+          paddingLeft="4px">
           <Text
             fontSize="2rem"
             fontWeight="bold"
             textDecoration="none"
-            textAlign="center"
-          >
+            textAlign="center">
             {t("description.part3")}
           </Text>
           <Text fontSize="1.4rem">{t("description.part4")}</Text>
@@ -144,8 +137,7 @@ export const EdBoard: React.FC = () => {
             border="2px solid black"
             width="380px"
             fontSize="1.4rem"
-            fontWeight="bold"
-          >
+            fontWeight="bold">
             {t("description.part5")}
           </Text>
         </Box>
@@ -160,16 +152,14 @@ export const EdBoard: React.FC = () => {
           boxShadow="5px 10px 6px #888888"
           borderRadius="10px"
           paddingLeft="4px"
-          paddingRight="10px"
-        >
+          paddingRight="10px">
           <Box width="1000px" marginLeft="5rem">
             <Text
               fontSize="2rem"
               fontWeight="bold"
               textDecoration="none"
               textAlign="center"
-              marginBottom="2.8rem"
-            >
+              marginBottom="2.8rem">
               {t("description.part6")}
             </Text>
             <Box
@@ -177,15 +167,13 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem"> {t("description.part7")}</Text>
               <Text
                 border="2px solid black"
                 width="380px"
                 fontSize="1.4rem"
-                fontWeight="bold"
-              >
+                fontWeight="bold">
                 {t("description.part8")}
               </Text>
             </Box>
@@ -194,8 +182,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem"> {t("description.part9")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part10")}
@@ -207,8 +194,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part11")}</Text>
               <Text fontSize="1.4rem" width={{ lg: "380px" }}>
                 {t("description.part12")}
@@ -219,8 +205,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem"> {t("description.part13")}</Text>
               <Text fontSize="1.4rem" width={{ lg: "380px" }}>
                 {t("description.part14")}
@@ -231,8 +216,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem"> {t("description.part15")}</Text>
               <Text fontSize="1.4rem" width={{ lg: "380px" }}>
                 {t("description.part16")}
@@ -243,8 +227,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem"> {t("description.part26")}</Text>
             </Box>
           </Box>
@@ -260,16 +243,14 @@ export const EdBoard: React.FC = () => {
           boxShadow="5px 10px 6px #888888"
           borderRadius="10px"
           paddingLeft="4px"
-          paddingRight="10px"
-        >
+          paddingRight="10px">
           <Box width="1000px" marginLeft="5rem">
             <Text
               fontSize="2rem"
               fontWeight="bold"
               textDecoration="none"
               textAlign="center"
-              marginBottom="2.8rem"
-            >
+              marginBottom="2.8rem">
               {t("description.part17")}
             </Text>
             <Box
@@ -277,8 +258,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part18")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part19")}
@@ -289,8 +269,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part20")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part21")}
@@ -301,8 +280,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part22")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part23")}
@@ -313,8 +291,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part24")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part25")}
@@ -325,8 +302,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part26")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part27")}
@@ -337,8 +313,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part28")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part29")}
@@ -349,8 +324,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part30")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part31")}
@@ -361,8 +335,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part32")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part33")}
@@ -373,8 +346,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part34")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part35")}
@@ -385,8 +357,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part36")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part37")}
@@ -398,8 +369,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part38")}</Text>
               <Text width={{ lg: "380px" }} fontSize="1.4rem">
                 {t("description.part47")}
@@ -411,8 +381,7 @@ export const EdBoard: React.FC = () => {
               flexDirection={{ lg: "row", md: "column", sm: "column" }}
               alignItems="center"
               justifyContent="space-between"
-              marginBottom="10px"
-            >
+              marginBottom="10px">
               <Text fontSize="1.4rem">{t("description.part48")}</Text>
             </Box>
           </Box>
@@ -428,16 +397,14 @@ export const EdBoard: React.FC = () => {
           borderRadius="10px"
           display="flex"
           flexDirection={{ lg: "row", md: "column", sm: "column" }}
-          alignItems="center"
-        >
+          alignItems="center">
           <Box
             width={{ lg: "600px", md: "", sm: "" }}
             marginLeft="5rem"
             display="flex"
             flexDirection="column"
             justifyContent="center"
-            marginBottom="7px"
-          >
+            marginBottom="7px">
             <Text fontSize="2rem" fontWeight="bold">
               {t("description.part39")}
             </Text>
@@ -452,8 +419,7 @@ export const EdBoard: React.FC = () => {
             display="flex"
             flexDirection="column"
             justifyContent="center"
-            marginBottom="7px"
-          >
+            marginBottom="7px">
             <Text fontSize="2rem" fontWeight="bold">
               {t("description.part42")}
             </Text>

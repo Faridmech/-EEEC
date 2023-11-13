@@ -1,21 +1,21 @@
-import { Box, Heading, Image, Text, Center, Input } from "@chakra-ui/react"
+import { Box, Image, Text, Center, Input } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import React from "react"
 import dataF from "./data.json"
 import { useTranslation } from "react-i18next"
 
-interface IProps {
-  title: string
-  url: string
-  pdfUrl: string
-  content: [
-    {
-      author: string
-      name: string
-      page: number
-    }
-  ]
-}
+// interface IProps {
+//   title: string
+//   url: string
+//   pdfUrl: string
+//   content: [
+//     {
+//       author: string
+//       name: string
+//       page: number
+//     }
+//   ]
+// }
 
 export const Archive: React.FC = () => {
   const [searchText, setSearchText] = useState("")
@@ -64,8 +64,7 @@ export const Archive: React.FC = () => {
               display="flex"
               flexDirection={{ lg: "row", sm: "column" }}
               mt="1.4rem"
-              justifyContent="center"
-            >
+              justifyContent="center">
               <Box>
                 <Image
                   src={item.url}
@@ -74,8 +73,7 @@ export const Archive: React.FC = () => {
                   onClick={() => {
                     window.open(pdfurl, "_blank")
                   }}
-                  cursor="pointer"
-                ></Image>
+                  cursor="pointer"></Image>
               </Box>
               <Box marginLeft="2rem" width="800px">
                 <Text
@@ -83,8 +81,7 @@ export const Archive: React.FC = () => {
                   mt="1.5rem"
                   mb="1.5rem"
                   fontWeight="bold"
-                  fontSize="1.3rem"
-                >
+                  fontSize="1.3rem">
                   {item.title}
                 </Text>
                 <Text>
@@ -99,8 +96,7 @@ export const Archive: React.FC = () => {
                         <Text
                           marginLeft="23px"
                           fontFamily="Inconsolata, monospace"
-                          color="blue.400"
-                        >
+                          color="blue.400">
                           {i.name} (Page- {i.page})
                         </Text>
                       </Box>

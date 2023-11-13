@@ -16,9 +16,9 @@ import { useIsActiveRoute } from "./hooks"
 import { Image } from "@chakra-ui/react"
 import { GrUserAdmin } from "react-icons/gr"
 import { changeLanguage } from "i18next"
-interface IProps {
-  langValue: string
-}
+// interface IProps {
+//   langValue: string
+// }
 export const Navigations: React.FC = () => {
   const { checkIsActive } = useIsActiveRoute()
 
@@ -35,8 +35,7 @@ export const Navigations: React.FC = () => {
       bg="rgb(245,245,245)"
       pos="sticky"
       flexDirection="column"
-      alignContent="space-between"
-    >
+      alignContent="space-between">
       <HStack justify="space-around" w="100%">
         <Box
           display="flex"
@@ -44,12 +43,10 @@ export const Navigations: React.FC = () => {
           width="67px"
           height="30px"
           bg="rgb(0,49,119)"
-          borderRadius="5px"
-        >
+          borderRadius="5px">
           <Tooltip
             label="ELECTROENERGETICS, ELECTROTECHNICS, ELECTROMECHANICS + CONTROL"
-            hasArrow
-          >
+            hasArrow>
             <Text color="white" fontWeight="bold" fontSize="1.6rem">
               EEEC
             </Text>
@@ -58,13 +55,11 @@ export const Navigations: React.FC = () => {
         <HStack
           alignItems="center"
           gap={{ lg: "5rem", md: "3rem", sm: "1rem" }}
-          ml={{ lg: "10rem", md: "6rem", sm: "3rem" }}
-        >
+          ml={{ lg: "10rem", md: "6rem", sm: "3rem" }}>
           <ChakraLink href="http://asoiu.edu.az/" width="fit-content">
             <Tooltip
               label=" Azerbaijan State Oil and Industry University"
-              hasArrow
-            >
+              hasArrow>
               <Image
                 src="/adnsu.png"
                 borderRadius="10%"
@@ -75,8 +70,7 @@ export const Navigations: React.FC = () => {
           <ChakraLink href=" http://azenerji.com/en/about/pei.html">
             <Tooltip
               hasArrow
-              label="Azerbaijan Scientific-Research & Design Prospecting Power Engineering Institute"
-            >
+              label="Azerbaijan Scientific-Research & Design Prospecting Power Engineering Institute">
               <Image
                 src="/Area.png"
                 borderRadius="10%"
@@ -113,8 +107,7 @@ export const Navigations: React.FC = () => {
             cursor="pointer"
             pt="4px"
             pl="9px"
-            ml={{ lg: "2rem", md: "1.4rem", sm: "0.5rem" }}
-          >
+            ml={{ lg: "2rem", md: "1.4rem", sm: "0.5rem" }}>
             <GrUserAdmin />
           </Box>
         </Box>
@@ -129,13 +122,11 @@ export const Navigations: React.FC = () => {
                 fontSize={{ lg: "1.2rem", md: "1rem", sm: "0.9rem" }}
                 spacing="0"
                 transition="0.2s ease-in"
-                color={isActive ? "blue.400" : "rgb(0,59,90)"}
-              >
+                color={isActive ? "blue.400" : "rgb(0,59,90)"}>
                 <Text
                   textUnderlineOffset={5}
                   transition="0.05s ease-in"
-                  textDecoration={isActive ? "underline" : "unset"}
-                >
+                  textDecoration={isActive ? "underline" : "unset"}>
                   {t(`nav.${nav.name}`)}
                 </Text>
               </VStack>
